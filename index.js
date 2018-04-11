@@ -1,11 +1,12 @@
 module.exports = function (sails) {
-
-    var Xiaomi = require('./lib/Xiaomi.js');
+    var listen = require('./lib/listen.js');
+    var install = require('./lib/install.js');
 
     gladys.on('ready', function(){
-        var xiaomi = new Xiaomi('wkj8q0gi2nmaugth');
+        listen();
     });
 
     return {
+        install: install
     };
 };
