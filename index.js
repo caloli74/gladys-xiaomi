@@ -10,8 +10,8 @@ module.exports = function (sails) {
 
     return {
         install: install,
-        exec: exec,
-        playSound: shared.xiaomi.playSound(sound, volume),
-        setColor: shared.xiaomi.setColor(color, intensity)
+        exec: exec
+//        playSound: shared.xiaomi.playSound(sound, volume),
+//        setColor: shared.xiaomi.setColor(color, intensity)
     };
 };
