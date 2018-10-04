@@ -1,9 +1,9 @@
 module.exports = function (sails) {
-    var shared = require('./lib/shared.js');
     var listen = require('./lib/listen.js');
     var install = require('./lib/install.js');
     var exec = require('./lib/exec.js');
-    function setColor() {shared.xiaomi.setColor(color, intensity)};
+    var setColor = require('./lib/setColor.js');
+    var playSound = require('./lib/playSound.js');
 
     gladys.on('ready', function(){
         listen();
@@ -12,8 +12,7 @@ module.exports = function (sails) {
     return {
         install: install,
         exec: exec,
-        setColor: setColor
-//        playSound: shared.xiaomi.playSound(sound, volume),
-//        setColor: shared.xiaomi.setColor(color, intensity)
+        setColor: setColor,
+        playSound: playSound
     };
 };
